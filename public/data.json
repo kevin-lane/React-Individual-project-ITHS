@@ -1,0 +1,52 @@
+
+[
+    {
+      "id": 1,
+      "title": "A cow herd",
+      "user": "Kevin Lane",
+      "price": 50,
+      "img": "../src/assets/cowherd.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Arabian city life",
+      "user": "Ali Hussain",
+      "price": 100,
+      "img": "../src/assets/arabiancitylife.jpg"
+    },
+    {
+      "id": 3,
+      "title": "A scene in a park",
+      "user": "Tove Berg",
+      "price": 75,
+      "img": "../src/assets/hagaparken.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Awesome metal art",
+      "user": "Linus Lindvall",
+      "price": 123,
+      "img": "../src/assets/metalart.jpg"
+    },
+    {
+      "id": 5,
+      "title": "A pristine sunset in the middle of the sea",
+      "user": "Elsa",
+      "price": 120,
+      "img": "../src/assets/sunsetsea.jpg"
+    },
+    {
+      "id": 6,
+      "title": "Trees",
+      "user": "Nick",
+      "price": 111,
+      "img": "../src/assets/treeinfield.jpg"
+    },
+    {
+      "id": 7,
+      "title": "Trees",
+      "user": "Nick",
+      "price": 111,
+      "img": "../src/assets/treeinfield.jpg"
+    }
+  ]
