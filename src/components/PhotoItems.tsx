@@ -17,16 +17,15 @@ function PhotoItems() {
       setPhotoItems(data);
     })
   }, []);
-  console.log(photoItems);
+  console.log(photoItems.length);
 
-  {photoItems.map(item => {
-    console.log(item.id);
-    console.log(item.title);
-  })}
   return (
     <div>
       <h1>Kevins photo store</h1>
-      <List>
+      {photoItems.length === 0 ?
+        <p>Nothing here</p>
+        :
+        <List>
         {photoItems.map(item => {
           console.log();
           console.log(item.title);
@@ -40,8 +39,10 @@ function PhotoItems() {
                 img={item.img}
               />
           )
-        })}
-      </List>
+          })}
+        </List>
+      }
+
     </div>
   )
 }
