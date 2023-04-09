@@ -1,10 +1,12 @@
 import React from 'react';
 import { createHashRouter, Link, Outlet, RouterProvider } from 'react-router-dom';
 import styled from 'styled-components';
+import LogInIcon from './icons/LogInIcon';
 
 const NavigationBar = styled.nav`
     background-color: aqua;
     height: 10vh;
+    width: 100%;
 `
 
 const NavList = styled.ul`
@@ -33,6 +35,9 @@ function NavBar() {
         </ListItem>
         <ListItem>
           <Link to="/contact">Contact</Link>
+        </ListItem>
+        <ListItem>
+          <LogInIcon />
         </ListItem>
       </NavList>
     </NavigationBar>
