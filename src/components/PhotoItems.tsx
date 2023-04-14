@@ -17,7 +17,7 @@ function PhotoItems() {
       setPhotoItems(data);
     })
   }, []);
-  console.log(photoItems.length);
+  console.log(photoItems);
 
   return (
     <div>
@@ -30,6 +30,7 @@ function PhotoItems() {
           console.log();
           console.log(item.title);
           return(
+            <div>
               <ItemCard
                 key={item.id}
                 id={item.id}
@@ -38,11 +39,11 @@ function PhotoItems() {
                 price={item.price}
                 img={item.img}
               />
+              </div>
           )
           })}
         </List>
       }
-
     </div>
   )
 }

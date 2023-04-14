@@ -1,13 +1,15 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import HeartIcon from './icons/HeartIcon';
 import styled from 'styled-components';
+import { useNavigate } from 'react-router-dom';
+import { ProductContext } from './context/ProductContext';
 
 interface Props {
   id: number;
   title: string;
   userName: string;
   price: number;
-  img: any;
+  img: string;
 }
 
 const Li = styled.li`
@@ -42,8 +44,20 @@ const Icon = styled.span`
 `
 
 function ItemCard(props:Props) {
+  const photoDetails = useContext(ProductContext);
+  const navigate = useNavigate();
+  function goToProduct(){
+    navigate(`/store/${props.id}`);
+    photoDetails.setId(props.id);
+    photoDetails.setTitle(props.title);
+    photoDetails.setUserName(props.userName);
+    photoDetails.setPrice(props.price);
+    photoDetails.setImg(props.img);
+    console.log(photoDetails);
+  }
+
   return (
-    <Li>
+    <Li onClick={goToProduct}>
       <Img src={props.img} alt="" />
       <Title>{props.title}</Title>
         <User>{props.userName}</User>
