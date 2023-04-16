@@ -1,7 +1,6 @@
 import React from 'react';
-import { createHashRouter, Link, Outlet, RouterProvider } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import LogInIcon from './icons/LogInIcon';
 
 const NavigationBar = styled.nav`
     background-color: aqua;
@@ -11,8 +10,10 @@ const NavigationBar = styled.nav`
 
 const NavList = styled.ul`
   list-style-type: none;
-  /* background-color: deepskyblue; */
-  margin: auto;
+  margin: 0px;
+  padding: 2rem;
+  font-family: cursive;
+    font-size: large;
 `;
 
 const ListItem = styled.li`
@@ -20,26 +21,27 @@ const ListItem = styled.li`
     margin: 3rem;
 `
 
+const LinkItem = styled(Link)`
+  text-decoration: none;
+`
+
 function NavBar() {
   return (
     <NavigationBar>
-      <NavList>
-        <ListItem>
-          <Link to="/">Home</Link>
-        </ListItem>
-        <ListItem>
-          <Link to="/store">Store</Link>
-        </ListItem>
-        <ListItem>
-          <Link to="/about">About us</Link>
-        </ListItem>
-        <ListItem>
-          <Link to="/contact">Contact</Link>
-        </ListItem>
-        <ListItem>
-          <LogInIcon />
-        </ListItem>
-      </NavList>
+        <NavList>
+          <ListItem>
+            <LinkItem to="/">Home</LinkItem>
+          </ListItem>
+          <ListItem>
+            <LinkItem to="/store">Store</LinkItem>
+          </ListItem>
+          <ListItem>
+            <LinkItem to="/about">About us</LinkItem>
+          </ListItem>
+          <ListItem>
+            <LinkItem to="/contact">Contact</LinkItem>
+          </ListItem>
+        </NavList>
     </NavigationBar>
   )
 }
